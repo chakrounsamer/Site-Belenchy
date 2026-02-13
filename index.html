@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belenchy | Décoration Artisanale</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-green: #00443d;
+            --light-bg: #fdfdfd;
+        }
+
+        body { 
+            font-family: 'Helvetica Neue', sans-serif; 
+            margin: 0; 
+            background-color: var(--light-bg); 
+            color: #333; 
+            line-height: 1.6;
+        }
+
+        header { 
+            text-align: center; 
+            padding: 40px 20px; 
+            background: white; 
+        }
+
+        /* --- LOGO EN CERCLE AVEC ZOOM --- */
+        .logo-container {
+            width: 150px;  /* Taille du cercle fixe */
+            height: 150px; /* Taille du cercle fixe */
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden; /* Cache ce qui dépasse du cercle */
+            border: 3px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #00443d; /* Rappel de la couleur du logo au cas où */
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* MODIFICATION ICI : On agrandit l'image interne sans changer le cercle */
+            transform: scale(1.6); /* 1.6 signifie 160% de sa taille. Ajuste ce chiffre selon ton goût */
+        }
+
+        h1 { letter-spacing: 4px; text-transform: uppercase; margin: 10px 0; font-weight: 300; }
+        .tagline { color: var(--gold); font-style: italic; margin-bottom: 30px; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; 
+        }
+
+        .card { 
+            background: white; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            transition: transform 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card img { 
+            width: 100%; 
+            height: 350px; 
+            object-fit: cover; 
+            background: #eee;
+        }
+
+        .product-info { padding: 20px; }
+        .price { font-size: 1.2rem; color: var(--dark-green); font-weight: bold; }
+
+        .btn-wa { 
+            display: inline-block; 
+            background-color: #25D366; 
+            color: white; 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-wa:hover { background-color: #128C7E; transform: scale(1.05); }
+
+        footer { text-align: center; padding: 60px; background: #f4f4f4; margin-top: 50px; }
+        .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* On augmente le zoom pour supprimer les bords blancs/noirs de l'image originale */
+    transform: scale(2.1); 
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="Logo_BELENCHY.jpeg" alt="Logo Belenchy">
+    </div>
+    <h1>BELENCHY</h1>
+</header>
+
+<div class="container">
+    <div class="grid">
+        
+        <div class="card">
+            <img src="concret.jpeg" alt="Collection Belenchy">
+            <div class="product-info">
+                <h3>Collection Signature</h3>
+                <p>Ensemble de vases et boîtes artisanales</p>
+                <p class="price">Sur demande</p>
+                <a href="https://wa.me/21655258255?text=Bonjour Belenchy, je souhaite commander un article de votre collection" class="btn-wa">Commander sur WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x500?text=Prochain+Article" alt="Belenchy">
+            <div class="product-info">
+                <h3>Nouveauté à venir</h3>
+                <p>Design unique en gypse</p>
+                <p class="price">-- DT</p>
+                <a href="#" class="btn-wa">Bientôt disponible</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>Belenchy &copy; 2026 - Créations faites main en Tunisie</p>
+</footer>
+
+</body>
+</html>
